@@ -1,5 +1,7 @@
 package com.pillar;
 
+import com.pillar.io.IGameSaver;
+
 /**
  * Created by IntelliJ IDEA.
  * User: jeremy
@@ -7,5 +9,15 @@ package com.pillar;
  * Time: 7:59:34 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Game {
+public class Game implements IGame {
+    private IGameSaver gameSaver;
+
+    public Game(IGameSaver gameSaver) {
+
+        this.gameSaver = gameSaver;
+    }
+
+    public void saveGame() {
+        gameSaver.save(this);
+    }
 }
