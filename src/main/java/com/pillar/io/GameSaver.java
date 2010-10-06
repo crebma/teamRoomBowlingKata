@@ -2,6 +2,8 @@ package com.pillar.io;
 
 import com.pillar.IGame;
 
+import java.io.ObjectOutputStream;
+
 /**
  * Created by IntelliJ IDEA.
  * User: jeremy
@@ -10,9 +12,14 @@ import com.pillar.IGame;
  * To change this template use File | Settings | File Templates.
  */
 public class GameSaver implements IGameSaver {
-    
+    private ObjectOutputStream objectOutputStream;
+
+    public GameSaver(ObjectOutputStream objectOutputStream) {
+        this.objectOutputStream = objectOutputStream;
+    }
+
 
     public void save(IGame theGame) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        
     }
 }
