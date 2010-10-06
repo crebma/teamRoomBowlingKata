@@ -30,7 +30,6 @@ public class GameSaverTest {
         target = new GameSaver(objectOutputStream);
     }
 
-
     @Test
     public void writeObjectIsCaledOnOutputStreamWithGameObject() throws Throwable {
 
