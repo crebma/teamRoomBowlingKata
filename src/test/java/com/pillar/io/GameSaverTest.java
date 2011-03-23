@@ -1,6 +1,13 @@
 package com.pillar.io;
 
+import com.pillar.IGame;
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+
+import java.io.ObjectOutputStream;
+
+import static org.mockito.Mockito.verify;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,8 +18,24 @@ import org.junit.Test;
  */
 public class GameSaverTest {
 
+    @Mock
+    private ObjectOutputStream objectOutputStream;
+    @Mock
+    private IGame gameMock;
+
+    private IGameSaver target;
+
+    @Before
+    public void setUp() throws Throwable {
+        target = new GameSaver(objectOutputStream);
+    }
+
     @Test
-    public void doSomething() {
+    public void writeObjectIsCaledOnOutputStreamWithGameObject() throws Throwable {
+
+        target.save(gameMock);
+
+        verify(objectOutputStream).writeObject(gameMock);
         
     }
 
