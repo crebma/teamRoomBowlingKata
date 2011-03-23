@@ -1,5 +1,6 @@
 package com.pillar;
 
+import com.pillar.bowlinggame.view.cli.ConsoleGui;
 import com.pillar.io.IGameSaver;
 
 /**
@@ -11,13 +12,23 @@ import com.pillar.io.IGameSaver;
  */
 public class Game implements IGame {
     private IGameSaver gameSaver;
+    private ConsoleGui consoleGui;
+    private int numberOfPlayers;
 
-    public Game(IGameSaver gameSaver) {
-
+    public Game(IGameSaver gameSaver, ConsoleGui consoleGui) {
         this.gameSaver = gameSaver;
+        this.consoleGui = consoleGui;
     }
 
     public void saveGame() {
         gameSaver.save(this);
+    }
+
+    public void startNewGame() throws Exception {
+      numberOfPlayers = consoleGui.readNextRoll();
+    }
+
+    public int getNumberOfPlayers() {
+      return numberOfPlayers;
     }
 }

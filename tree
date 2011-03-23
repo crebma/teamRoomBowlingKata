@@ -1,0 +1,33 @@
+[INFO] 
+NOTE: Maven is executing in offline mode. Any artifacts not already in your local
+repository will be inaccessible.
+
+[INFO] Scanning for projects...
+[INFO] Searching repository for plugin with prefix: 'dependency'.
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD ERROR
+[INFO] ------------------------------------------------------------------------
+[INFO] Failed to resolve artifact.
+
+GroupId: org.apache.maven.plugins
+ArtifactId: maven-dependency-plugin
+Version: 2.0
+
+Reason: System is offline.
+
+  org.apache.maven.plugins:maven-dependency-plugin:pom:2.0
+
+
+
+
+NOTE: Maven is executing in offline mode. Any artifacts not already in your local
+repository will be inaccessible.
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] For more information, run Maven with the -e switch
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: < 1 second
+[INFO] Finished at: Tue Oct 05 21:02:57 EDT 2010
+[INFO] Final Memory: 1M/3M
+[INFO] ------------------------------------------------------------------------

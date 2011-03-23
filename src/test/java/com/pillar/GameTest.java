@@ -27,7 +27,7 @@ public class GameTest {
     public void setUp() throws Throwable {
         gameSaver = mock(IGameSaver.class);
 
-        target = new Game(gameSaver);
+        target = new Game(gameSaver, null);
     }
 
     @Test
